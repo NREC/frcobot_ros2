@@ -25,6 +25,19 @@ file(GLOB SRC_DIR ./src/command_server.cpp ./src/command_server_node.cpp)
 file(GLOB EXP_SRC_DIR ./examples/src/*.cpp)
 
 #compile
+
+IF (${CMAKE_SYSTEM_PROCESSOR} MATCHES "x86_64" )
+file(COPY_FILE 
+"${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/x86_64/libfairino.so.2.3.3"
+"${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.3.3"
+)
+ELSEIF (${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64" )
+file(COPY_FILE 
+"${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/aarch64/libfairino.so.2.3.3"
+"${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.3.3"
+)
+ENDIF()
+
 file(CREATE_LINK 
 "${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.3.3"
 "${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2"
