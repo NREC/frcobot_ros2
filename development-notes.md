@@ -90,7 +90,6 @@ library.
 
 ## To do
 
-- [ ] Reset `main` to `upstream/main` (force-push) to drop merge commit `1d8079e`.
 - [ ] Add per-architecture libraries (`libfairino/lib/{x86_64,aarch64}/`) for the selected hardware package, chosen by
   `CMAKE_SYSTEM_PROCESSOR` as on `hotfix/support-aarch64`.
 - [ ] Delete `hotfix/support-aarch64` once `dev` has been tested with downstream.
