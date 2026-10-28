@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/base_link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/base_link.dae" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/base_link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/shoulder_Link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/shoulder_Link.dae" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/shoulder_Link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/shoulder_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -108,10 +108,10 @@
       damping="0"
       friction="0" />
     <safety_controller
-      soft_upper="0"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+      soft_lower_limit="-3.0543"
+      soft_upper_limit="3.0543"
+      k_position="15"
+      k_velocity="10" />
   </joint>
   <link
     name="upperarm_Link">
@@ -135,7 +135,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/upperarm_Link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/upperarm_Link.dae" />
       </geometry>
       <material
         name="">
@@ -149,7 +149,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/upperarm_Link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/upperarm_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -177,10 +177,10 @@
       damping="0"
       friction="0" />
     <safety_controller
-      soft_upper="0"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+      soft_lower_limit="-4.6251"
+      soft_upper_limit="1.4835"
+      k_position="15"
+      k_velocity="10" />
   </joint>
   <link
     name="forearm_Link">
@@ -204,7 +204,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/forearm_Link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/forearm_Link.dae" />
       </geometry>
       <material
         name="">
@@ -218,7 +218,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/forearm_Link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/forearm_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -246,10 +246,10 @@
       damping="0"
       friction="0" />
     <safety_controller
-      soft_upper="0"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+      soft_lower_limit="-2.7925"
+      soft_upper_limit="2.7925"
+      k_position="15"
+      k_velocity="10" />
   </joint>
   <link
     name="wrist1_Link">
@@ -273,7 +273,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/wrist1_Link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/wrist1_Link.dae" />
       </geometry>
       <material
         name="">
@@ -287,7 +287,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/wrist1_Link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/wrist1_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -315,10 +315,10 @@
       damping="0"
       friction="0" />
     <safety_controller
-      soft_upper="0"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+      soft_lower_limit="-4.6251"
+      soft_upper_limit="1.4835"
+      k_position="15"
+      k_velocity="10" />
   </joint>
   <link
     name="wrist2_Link">
@@ -342,7 +342,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/wrist2_Link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/wrist2_Link.dae" />
       </geometry>
       <material
         name="">
@@ -356,7 +356,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/wrist2_Link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/wrist2_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -384,10 +384,10 @@
       damping="0"
       friction="0" />
     <safety_controller
-      soft_upper="0"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+      soft_lower_limit="-3.0543"
+      soft_upper_limit="3.0543"
+      k_position="15"
+      k_velocity="10" />
   </joint>
   <link
     name="wrist3_Link">
@@ -411,7 +411,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/visual/wrist3_Link.dae" />
+          filename="package://fairino_description/meshes/FR3WML/visual/wrist3_Link.dae" />
       </geometry>
       <material
         name="">
@@ -425,7 +425,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="../meshes/FR3WML/collision/wrist3_Link.STL" />
+          filename="package://fairino_description/meshes/FR3WML/collision/wrist3_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -453,10 +453,10 @@
       damping="0"
       friction="0" />
     <safety_controller
-      soft_upper="0"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+      soft_lower_limit="-6.2832"
+      soft_upper_limit="6.2832"
+      k_position="15"
+      k_velocity="10" />
   </joint>
   <!-- <link
     name="tool_Link">
@@ -498,7 +498,7 @@
       </geometry>
     </collision>
   </link> -->
-  <joint
+  <!-- <joint
     name="tool"
     type="fixed">
     <origin
@@ -526,5 +526,5 @@
       soft_lower="0"
       k_position="0"
       k_velocity="0" />
-  </joint>
+  </joint> -->
 </robot>
