@@ -63,9 +63,14 @@ $<INSTALL_INTERFACE:include/fairino_hardware>
 # target_link_libraries(ros2_cmd_server ${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.3.0)
 # target_link_libraries(fairino_hardware ${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.3.0)
 
+set(FAIRINO_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib)
+if(CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64")
+  set(FAIRINO_LIB_DIR ${FAIRINO_LIB_DIR}/aarch64)
+endif()
+
 # 链接库时添加rpath参数
-target_link_libraries(ros2_cmd_server "-Wl,-rpath,$ORIGIN" ${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.4.0)
-target_link_libraries(fairino_hardware "-Wl,-rpath,$ORIGIN" ${CMAKE_CURRENT_SOURCE_DIR}/libfairino/lib/libfairino.so.2.4.0)
+target_link_libraries(ros2_cmd_server "-Wl,-rpath,$ORIGIN" ${FAIRINO_LIB_DIR}/libfairino.so.2.4.0)
+target_link_libraries(fairino_hardware "-Wl,-rpath,$ORIGIN" ${FAIRINO_LIB_DIR}/libfairino.so.2.4.0)
 
 #add dependencies
 ament_target_dependencies(ros2_cmd_server rclcpp fairino_msgs)
@@ -105,7 +110,7 @@ file(MAKE_DIRECTORY
 "${CMAKE_INSTALL_PREFIX}/lib/${PROJECT_NAME}"
 )
 
-file(COPY_FILE "libfairino/lib/libfairino.so.2.4.0" 
+file(COPY_FILE "${FAIRINO_LIB_DIR}/libfairino.so.2.4.0"
 "${CMAKE_INSTALL_PREFIX}/lib/libfairino.so.2.4.0" 
 )
 
