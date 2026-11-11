@@ -51,7 +51,7 @@ The selected version must match the controller software on every robot using thi
 1. Upgrade the controller software on all robots to the new version.
 2. Move the `COLCON_IGNORE` from the new package to the old one.
 3. Port the old package's `dev` changes (`git diff main dev -- fairino_hardware_vOLD/`) to the new package.
-4. Build the aarch64 `libfairino` for the new SDK version (see below).
+4. Build the aarch64 `libfairino` for the new SDK version (see below) and add it to the new package.
 5. In downstream workspaces, delete the old package's `build/` and `install/` directories. A stale install still
    registers the plugin.
 
@@ -61,7 +61,8 @@ The selected version must match the controller software on every robot using thi
 Upstream vendors only an x86_64 Linux build. Build the aarch64 library from
 [fairino-cpp-sdk](https://github.com/FAIR-INNOVATION/fairino-cpp-sdk), at the tag that matches the vendored
 `libfairino.so.2.A.B` (for example, `v2.4.0-robot4.0.0`). Build natively on an aarch64 machine or in a container
-running the target's Ubuntu release, so glibc matches:
+running the target's Ubuntu release, so glibc matches. Add it in `libfairino/lib/aarch64/` of the selected package,
+next to upstream's x86_64 build in `libfairino/lib/`:
 
 ```bash
 git clone --depth 1 --branch v2.A.B-robotX.Y.Z https://github.com/FAIR-INNOVATION/fairino-cpp-sdk.git
@@ -77,6 +78,8 @@ library.
 
 - `COLCON_IGNORE` in every `fairino_hardware*` package except the selected version, and in the `*_moveit2_config`
   packages.
+- aarch64 SDK in the selected package (`libfairino/lib/aarch64/`), chosen in its `CMakeLists.txt` by
+  `CMAKE_SYSTEM_PROCESSOR`.
 - This file.
 
 
@@ -90,6 +93,4 @@ library.
 
 ## To do
 
-- [ ] Add per-architecture libraries (`libfairino/lib/{x86_64,aarch64}/`) for the selected hardware package, chosen by
-  `CMAKE_SYSTEM_PROCESSOR` as on `hotfix/support-aarch64`.
 - [ ] Delete `hotfix/support-aarch64` once `dev` has been tested with downstream.
