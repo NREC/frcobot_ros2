@@ -48,8 +48,8 @@
     name="shoulder_link">
     <inertial>
       <origin
-        xyz="-0.0001 -0.02612 0.00404"
-        rpy="0 0 0" />
+        xyz="-0.0001 -0.00404 0.15388"
+        rpy="1.5708 0 0" />
       <mass
         value="11.97" />
       <inertia
@@ -117,7 +117,7 @@
     name="upperarm_link">
     <inertial>
       <origin
-        xyz="0.3604 0.00001 0.16309"
+        xyz="-0.1596 0.00001 0.16309"
         rpy="0 0 0" />
       <mass
         value="18.18" />
@@ -186,7 +186,7 @@
     name="forearm_link">
     <inertial>
       <origin
-        xyz="0.13503 0.00012 0.05558"
+        xyz="-0.26497 0.00012 0.05558"
         rpy="0 0 0" />
       <mass
         value="3.22" />
@@ -255,8 +255,8 @@
     name="wrist1_link">
     <inertial>
       <origin
-        xyz="0.00012 -0.003 0.01218"
-        rpy="0 0 0" />
+        xyz="0.00012 -0.01218 0.156"
+        rpy="1.5708 0 0" />
       <mass
         value="1.69" />
       <inertia
@@ -324,8 +324,8 @@
     name="wrist2_link">
     <inertial>
       <origin
-        xyz="-0.00012 0.003 0.01218"
-        rpy="0 0 0" />
+        xyz="-0.00012 0.01218 0.111"
+        rpy="-1.5708 0 0" />
       <mass
         value="1.69" />
       <inertia
@@ -393,7 +393,7 @@
     name="wrist3_link">
     <inertial>
       <origin
-        xyz="0.00124 0.00085 -0.02034"
+        xyz="0.00124 0.00085 0.08566"
         rpy="0 0 0" />
       <mass
         value="0.35" />

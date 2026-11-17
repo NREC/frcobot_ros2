@@ -80,6 +80,10 @@ library.
   packages.
 - aarch64 SDK in the selected package (`libfairino/lib/aarch64/`), chosen in its `CMakeLists.txt` by
   `CMAKE_SYSTEM_PROCESSOR`.
+- URDF tag fixes: `<origins>` in `fairino5_v6.urdf`, and `soft_upper`/`soft_lower` in the commented-out `tool` joint of
+  `FR3WML.urdf` and `FR3WMS.urdf`.
+- URDF inertials (all but `fairino3_mt_v6.urdf`): The `<inertial>` origins are expressed in the link frames, instead of
+  the child-joint frames (as in upstream).
 - This file.
 
 
